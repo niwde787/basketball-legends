@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basketball Legends: The Pantheon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .logo-shape {
+            clip-path: polygon(0 15%, 15% 0, 85% 0, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0 85%);
+        }
+        .spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: #FBBF24;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        .newspaper {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #F8F3E3;
+            color: #1a1a1a;
+            padding: 1rem 2rem 2rem 2rem;
+            border: 1px solid #dcdcdc;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .newspaper-header {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            border-bottom: 4px double #1a1a1a;
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+        }
+        .newspaper-headline {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: 2.5rem; /* 40px */
+            line-height: 1.1;
+            text-align: center;
+        }
+        .newspaper-subheadline {
+            font-family: 'Georgia', serif;
+            font-size: 1.25rem; /* 20px */
+            text-align: center;
+            margin-top: 0.5rem;
+            font-style: italic;
+            color: #1a1a1a;
+        }
+        .newspaper-body {
+            text-align: justify;
+            line-height: 1.6;
+            column-count: 2;
+            column-gap: 2rem;
+            font-size: 0.95rem;
+        }
+        .newspaper-divider {
+            border: 0;
+            border-top: 1px solid #ccc;
+            border-bottom: 2px solid #ccc;
+            height: 0;
+            margin: 1.5rem 0;
+        }
+
+        .newspaper-section-title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.75rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #1a1a1a;
+            padding-bottom: 0.5rem;
+        }
+        
+        .newspaper-mvp-card {
+            display: flex;
+            align-items: center;
+            background-color: #f0ead6; /* Slightly different shade for contrast */
+            border: 1px solid #dcdcdc;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+
+        .newspaper-box-score table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Georgia', serif;
+            font-size: 0.9rem;
+            color: #1a1a1a;
+        }
+
+        .newspaper-box-score th, .newspaper-box-score td {
+            border: 1px solid #ccc;
+            padding: 0.5rem;
+            text-align: center;
+        }
+        
+        .newspaper-box-score td:first-child {
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .newspaper-box-score th {
+            background-color: #e9e2ce;
+            font-weight: bold;
+        }
+
+        .newspaper-box-score .team-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .newspaper-body {
+                column-count: 1;
+            }
+            .newspaper-headline {
+                font-size: 2rem;
+            }
+            .newspaper-subheadline {
+                 font-size: 1.1rem;
+            }
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.1",
+    "react-dom/client": "https://esm.sh/react-dom@^19.1.1/client",
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.13.0",
+    "immer": "https://esm.sh/immer@^10.1.1"
+  }
+}
+</script>
+</head>
+<body class="bg-[#1A2238] text-gray-200 antialiased">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
